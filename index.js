@@ -59,9 +59,8 @@ app.post('/file',upload.single("file"),(req,res)=>
     if(file) // if file exists
     {
         
-        const filepath = req.files.upload.path; // file path
-        const filename = req.files.upload.name; // file name
-
+        const filepath = req.file.path; // file path
+        
         
         res.json(filepath)
     }
