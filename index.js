@@ -11,7 +11,7 @@ const multer=require('multer');
 
 
 // assign server port
-const port=3000;
+//const port=3000;
 
 // set app to express
 const app=express();
