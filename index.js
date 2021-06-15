@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 const path = require('path')
 
 // import express
@@ -56,7 +58,12 @@ app.post('/file',upload.single("file"),(req,res)=>
     const file=req.file;
     if(file) // if file exists
     {
-        res.json(file)
+        
+        const filepath = req.files.upload.path; // file path
+        const filename = req.files.upload.name; // file name
+
+        
+        res.json(filepath)
     }
 
     else
