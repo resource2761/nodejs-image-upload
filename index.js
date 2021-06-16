@@ -61,8 +61,8 @@ app.post('/file',upload.single("file"),(req,res)=>
         
         const filepath = req.file.path; // file path
         
-        
-        res.json(filepath)
+        console.log('storage location is ', req.hostname +'/' + req.file.path);
+        //res.json(filepath)
     }
 
     else
