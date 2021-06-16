@@ -62,7 +62,8 @@ app.post('/file', upload.single("file"), (req, res) => {
     //console.log('storage location is ', req.hostname +'/' + req.file.path);
     return res.status(200).json({
       location: req.hostname,
-      filepath: req.file.path
+      filepath: req.file.path,
+      image:req.hostname+'/'+req.file.path
     })
 
     //console.log(filepath)
